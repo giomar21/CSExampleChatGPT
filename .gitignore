@@ -1,0 +1,54 @@
+*.swp
+*.*~
+# Certificate files
+*.cer
+project.lock.json
+.DS_Store
+*.pyc
+nupkg/
+
+# Rider
+.idea
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+build/
+bld/
+[Bb]in/
+[Oo]bj/
+[Oo]ut/
+msbuild.log
+msbuild.err
+msbuild.wrn
+
+# Visual Studio 2015
+.vs/
+### VisualStudioCode ###
+.vscode/*
+
+# MSTest test Results
+**/[Tt]est[Rr]esult*/
+
+### Dont track secrets
+**/appsettings.[D|d]development.json
+**/appsettings.[S|s]staging.json
+**/appsettings.[P|p]production.json
+**/appsettings.json
+
+### log files
+*.log
+
+*.json
+/CS.VALIDACION.API/CS.VALIDACION.API/Recursos/Temp
+/Database/INSERTS_CATALOGOS.sql
