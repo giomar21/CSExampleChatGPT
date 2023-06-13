@@ -13,15 +13,16 @@ namespace CS.Example.Services
 {
     public static class HttpClientHelper
     {
-        public static async Task<GptResponse> Request(Message message, string uri, string contentType, HttpMethod method, Dictionary<string, string> headers = null)
+        public static async Task<GptResponse?> Request(GptRequest gptRequest, string uri, string contentType, HttpMethod method, Dictionary<string, string> headers = null)
         {
+            var jsonRequest = JsonConvert.SerializeObject(gptRequest, Formatting.Indented);
             var client = new HttpClient();
             var request = new HttpRequestMessage
             {
                 Method = method,
                 RequestUri = new Uri(uri),
                 Headers = { },
-                Content = new StringContent("{\r\"model\": \"gpt-3.5-turbo\",\r\"messages\": [\r{\r\"role\": \"user\",\r\"content\": \"" + message.content + "\"\r}\r]\r}")
+                Content = new StringContent(jsonRequest)
                 {
                     Headers =
 
@@ -43,7 +44,6 @@ namespace CS.Example.Services
             {
 	            response.EnsureSuccessStatusCode();
 	            var body = await response.Content.ReadAsStringAsync();
-                if (typeof(GptResponse) == typeof(string)) return (GptResponse)Convert.ChangeType(body, typeof(GptResponse));
                 return JsonConvert.DeserializeObject<GptResponse>(body);
             }
         }

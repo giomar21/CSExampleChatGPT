@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CS.Example.ChatGPT.Controllers
 {
-    public class ChatGPTController : Controller
+    public class ChatGptController : Controller
     {
         public IActionResult Index()
         {
@@ -24,7 +24,7 @@ namespace CS.Example.ChatGPT.Controllers
                 messages = new List<Message>() { request }
             });
 
-            if (result.choices != null && result.choices.Any())
+            if (result?.choices != null && result.choices.Any())
             {
                 Choice? choice = result.choices.FirstOrDefault();
 

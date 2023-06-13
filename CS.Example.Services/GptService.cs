@@ -38,7 +38,7 @@ namespace CS.Example.Services
         /// </summary>
         /// <param name="request"></param>
         /// <returns></returns>
-        public static async Task<GptResponse> CreateChatCompletionHttpClient(GptRequest request)
+        public static async Task<GptResponse?> CreateChatCompletionHttpClient(GptRequest request)
         {
             string urlRequest = $"https://openai80.p.rapidapi.com/chat/completions";
 
@@ -47,7 +47,7 @@ namespace CS.Example.Services
                 { "X-RapidAPI-Host", "openai80.p.rapidapi.com" }
             };
 
-            GptResponse response = await HttpClientHelper.Request(request.messages.FirstOrDefault(), urlRequest, ContentType.JSON, HttpMethod.Post, headers);
+            GptResponse? response = await HttpClientHelper.Request(request, urlRequest, ContentType.JSON, HttpMethod.Post, headers);
 
             return response;
         }
