@@ -3,6 +3,7 @@ using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Net.Http.Headers;
 using System.Reflection.PortableExecutable;
 using System.Text;
@@ -19,11 +20,7 @@ namespace CS.Example.Services
             {
                 Method = method,
                 RequestUri = new Uri(uri),
-                Headers =
-                {
-                    { "X-RapidAPI-Key", "7bb42da06fmshffec60946a92f3cp1fa214jsn982a8315f1f9" },
-                    { "X-RapidAPI-Host", "openai80.p.rapidapi.com" },
-                },
+                Headers = { },
                 Content = new StringContent("{\r\"model\": \"gpt-3.5-turbo\",\r\"messages\": [\r{\r\"role\": \"user\",\r\"content\": \"" + message.content + "\"\r}\r]\r}")
                 {
                     Headers =
@@ -33,6 +30,14 @@ namespace CS.Example.Services
                     }
                 }
             };
+
+            if (headers != null)
+            {
+                foreach (var item in headers)
+                {
+                    request.Headers.Add(item.Key, item.Value);
+                }
+            }
 
             using (var response = await client.SendAsync(request))
             {

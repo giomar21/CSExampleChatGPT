@@ -43,7 +43,6 @@ namespace CS.Example.Services
             string urlRequest = $"https://openai80.p.rapidapi.com/chat/completions";
 
             var headers = new Dictionary<string, string>() {
-                { "Content-Type", ContentType.JSON },
                 { "X-RapidAPI-Key", "7bb42da06fmshffec60946a92f3cp1fa214jsn982a8315f1f9" },
                 { "X-RapidAPI-Host", "openai80.p.rapidapi.com" }
             };
