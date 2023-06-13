@@ -12,7 +12,7 @@ namespace CS.Example.Services
     /// <summary>
     /// Cliente de peticiones REST
     /// </summary>
-    public static class HttpClient
+    public static class HttpClientHelper
     {
         /// <summary>
         /// Realiza una petición REST

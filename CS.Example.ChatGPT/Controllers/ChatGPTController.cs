@@ -19,11 +19,14 @@ namespace CS.Example.ChatGPT.Controllers
                 content = text
             };
 
-            var result = await GptService.CreateChatCompletion(new Common.Models.GptRequest() {
-                messages = new List<Message>() { request }
-            });
+            var testHttp = new HttpClientTest();
+            GptResponse response = await testHttp.Test(request);
 
-            return View(result);
+            //var result = await GptService.CreateChatCompletion(new Common.Models.GptRequest() {
+            //    messages = new List<Message>() { request }
+            //});
+
+            return View(response);
         }
     }
 }

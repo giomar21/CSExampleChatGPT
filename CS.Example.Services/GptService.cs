@@ -24,11 +24,11 @@ namespace CS.Example.Services
 
             var headers = new Dictionary<string, string>() {
                 { "Content-Type", ContentType.JSON },
-                { "X-RapidAPI-Key", "7bb42da06fmshffec60946a92f3cp1fa214jsn982a8315f1f9"},
-                { "X-RapidAPI-Host", "openai80.p.rapidapi.com"}
+                { "X-RapidAPI-Key", "7bb42da06fmshffec60946a92f3cp1fa214jsn982a8315f1f9" },
+                { "X-RapidAPI-Host", "openai80.p.rapidapi.com" }
             };
 
-            GptResponse response = await HttpClient.JsonRequest<GptResponse, GptRequest>(request, urlRequest, ContentType.JSON, HttpMethods.Post, headers);
+            GptResponse response = await HttpClientHelper.JsonRequest<GptResponse, GptRequest>(request, urlRequest, ContentType.JSON, HttpMethods.Post, headers);
 
             return response;
         }
