@@ -1,0 +1,12 @@
+﻿@{
+    
+}
+
+@model CS.Example.Common.Models.Message;
+
+<div class="input-group">
+    <span class="input-group-text">Resultado de la consulta</span>
+    <textarea class="form-control" aria-label="Resultado de la consulta">@Model?.content</textarea>
+</div>
+
+<a class="btn btn-primary mt-3" href="@Url.Action("Index", "ChatGPT")">Nueva consulta</a>
