@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using CS.Example.Common.Models;
+using CS.Example.Services;
+using Microsoft.AspNetCore.Mvc;
 
 namespace CS.Example.ChatGPT.Controllers
 {
@@ -12,9 +14,16 @@ namespace CS.Example.ChatGPT.Controllers
         [HttpPost]
         public async Task<ActionResult> CreateChat(string text)
         {
-            
+            var request = new Message() {
+                role = "user",
+                content = text
+            };
 
-            return View();
+            var result = await GptService.CreateChatCompletion(new Common.Models.GptRequest() {
+                messages = new List<Message>() { request }
+            });
+
+            return View(result);
         }
     }
 }

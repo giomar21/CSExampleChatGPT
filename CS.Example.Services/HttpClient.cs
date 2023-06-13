@@ -29,7 +29,7 @@ namespace CS.Example.Services
         public static async Task<T> JsonRequest<T, X>(X args, string url, string contentType, string method, Dictionary<string, string> headers = null, int timeout = 60000)
         {
             string webAddr = url;
-            var Json = JsonConvert.SerializeObject(args, Newtonsoft.Json.Formatting.Indented);
+            var Json = JsonConvert.SerializeObject(args, Formatting.Indented);
             var httpWebRequest = (HttpWebRequest)WebRequest.Create(webAddr);
 
             httpWebRequest.ContentType = contentType;
