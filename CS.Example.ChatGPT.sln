@@ -5,7 +5,9 @@ VisualStudioVersion = 17.6.33723.286
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CS.Example.ChatGPT", "CS.Example.ChatGPT\CS.Example.ChatGPT.csproj", "{D7D93D22-3F63-4939-9638-0FA84DFC453B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CS.Example.Services", "CS.Example.Services\CS.Example.Services.csproj", "{32D451C7-8211-4834-96C3-F4605FF4D186}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CS.Example.Services", "CS.Example.Services\CS.Example.Services.csproj", "{32D451C7-8211-4834-96C3-F4605FF4D186}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CS.Example.Common", "CS.Example.Common\CS.Example.Common.csproj", "{442DAEA5-6B81-44D0-AB2A-EA297790D8D0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{32D451C7-8211-4834-96C3-F4605FF4D186}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{32D451C7-8211-4834-96C3-F4605FF4D186}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{32D451C7-8211-4834-96C3-F4605FF4D186}.Release|Any CPU.Build.0 = Release|Any CPU
+		{442DAEA5-6B81-44D0-AB2A-EA297790D8D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{442DAEA5-6B81-44D0-AB2A-EA297790D8D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{442DAEA5-6B81-44D0-AB2A-EA297790D8D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{442DAEA5-6B81-44D0-AB2A-EA297790D8D0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

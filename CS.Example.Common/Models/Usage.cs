@@ -1,4 +1,4 @@
-﻿namespace CS.Example.ChatGPT.Models
+﻿namespace CS.Example.Common.Models
 {
     public class Usage
     {

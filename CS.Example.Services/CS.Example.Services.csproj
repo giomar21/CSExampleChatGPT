@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CS.Example.ChatGPT\CS.Example.ChatGPT.csproj" />
+    <ProjectReference Include="..\CS.Example.Common\CS.Example.Common.csproj" />
   </ItemGroup>
 
 </Project>

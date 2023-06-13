@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace CS.Example.ChatGPT.Models
+namespace CS.Example.Common.Models
 {
     public class GptResponse
     {

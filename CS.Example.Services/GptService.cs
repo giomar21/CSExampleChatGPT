@@ -1,4 +1,4 @@
-﻿using CS.Example.ChatGPT.Models;
+﻿using CS.Example.Common.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
